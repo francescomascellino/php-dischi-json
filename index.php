@@ -7,18 +7,36 @@
     <title>PHP Dischi JSON</title>
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
-<body>
+</head>
+
+<body data-bs-theme="dark" class="bg-body">
 
     <div id="app">
 
+        <nav class="navbar navbar-expand-sm navbar-light bg-secondary-subtle">
+            <div class="container">
+                <div class="row">
+                    <div class="col m-0">
+                        <a class="navbar-brand px-2" href="#"><img src="./assets/img/logo.svg" alt="Disk Database" style="height: 3rem;"></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+
+
         <div class="container">
+
             <div class="row my-3 g-3 p-2">
+
+                <!-- DISK CARDS -->
                 <div class="col-4" v-for="(disk, index) in disks" :key="index">
-                    <div class="card">
+                    <div class="card bg-dark-subtle">
                         <img :src="disk.poster" class="card-img-top" :alt="disk.title">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{disk.title}}</h5>
@@ -27,7 +45,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
 
     </div>
