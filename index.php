@@ -45,9 +45,11 @@
                                 <h1 class="modal-title fs-5" :id="`${disk.author.replace(/\s+/g, '')}${index}`">{{disk.title}}</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body text-center">
-                                <img :src="disk.poster" :alt="disk.title" style="width: 100%;" class="mb-2">
-                                <h3>{{disk.author}}</h3>
+                            <div class="modal-body">
+                                <img :src="disk.poster" :alt="disk.title" style="width: 100%;" class="mb-4">
+                                <p><strong>Autore: </strong>{{disk.author}}</p>
+                                <p><strong>Anno: </strong>{{disk.year}}</p>
+                                <p><strong>Genere: </strong>{{disk.genre}}</p>
                             </div>
                         </div>
                     </div>
