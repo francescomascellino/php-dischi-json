@@ -30,11 +30,9 @@
             </div>
         </nav>
 
-
         <div class="container">
 
             <div class="row my-3 g-3 p-2">
-
 
                 <!-- MODAL -->
                 <div class="modal fade" :id="`${disk.author.replace(/\s+/g, '')}${index}`" tabindex="-1" :aria-labelledby="`${disk.author.replace(/\s+/g, '')}${index}Label`" aria-hidden="true" v-for="(disk, index) in disks" :key="`${disk.author.replace(/\s+/g, '')}${index}`">
