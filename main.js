@@ -3,6 +3,7 @@ createApp({
     data() {
         return {
             disks: null,
+            error: null,
         }
     },
 
@@ -15,7 +16,11 @@ createApp({
             .then((response) => {
                 this.disks = response.data;
                 console.log("DISKS = ", this.disks);
-            });
+            })
+            .catch(err => {
+                this.error = err.message;
+                console.error(this.error);
+            })
 
     }
 }).mount('#app')
